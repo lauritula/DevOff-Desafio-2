@@ -1,5 +1,38 @@
 ![](https://static-cdn.jtvnw.net/jtv_user_pictures/fb425ddf-5e67-4c84-9210-8065809675f7-profile_banner-480.png)
 
+# Desafio resuelto por @lauritula
+
+Requisitos previos:
+* Herramienta para envio de peticiones HTTP REST (Postman o similar)
+* Node.js, version 12 o superior
+* Express (ejecutar `npm i` al iniciar)
+
+Ubicados en la carpeta raíz, abrimos la consola y ejecutamos:
+`node app.js`
+
+Desde Postman o similar, ejecutamos:
+
+`POST /cifrar HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: b3fcc8fd-9b69-4c3d-4fd9-1eecef24ed49
+{
+  "vueltas": 4,
+  "mensaje": "Este es un mensaje de prueba"
+}`
+
+`POST /descifrar HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: 8472d738-68cd-dda6-121d-a15fa57baf06
+{
+  "vueltas": 4,
+  "mensaje":"E uejeusenne ets s pbe madra"
+}
+`
+
 # Desafío 2 - 02/08/2020
 
 Vamos a implementar una versión moderna de un instrumento milenario que representa uno de los primeros sistemas de cifrado de la historia de la humanidad: una escítala. Construiremos una escítala en forma de REST API para cifrar y descifrar mensajes.
